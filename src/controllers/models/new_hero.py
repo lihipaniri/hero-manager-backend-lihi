@@ -8,4 +8,4 @@ class NewHero(BaseApiModel):
     suit_color: str
     has_cape: bool
     last_mission: datetime | None = None
-    powers: list[str]
+    powers: list[str] | None = []

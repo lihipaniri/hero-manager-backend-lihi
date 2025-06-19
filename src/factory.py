@@ -1,3 +1,4 @@
+from flask_cors import CORS
 from flask_socketio import SocketIO
 
 from flask import Flask
@@ -9,6 +10,8 @@ from src.database.database import Base, engine
 
 def create_app(config: Config = Config) -> Flask:
     app = Flask(__name__)
+
+    CORS(app)
 
     app.config.from_object(config)
 
